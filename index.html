@@ -5,10 +5,10 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/NeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PORTFOLIO - THE GASP COMPANY®</title>
+<title>Portfolio - THE GASP COMPANY®</title>
 <link rel="canonical" href="https://portfolio.thegasp.eu/">
 <meta name="description" content="Portfolio de THE GASP COMPANY®: identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
-<meta property="og:title" content="PORTFOLIO - THE GASP COMPANY®">
+<meta property="og:title" content="Portfolio - THE GASP COMPANY®">
 <meta property="og:description" content="Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
 <meta property="og:url" content="https://portfolio.thegasp.eu/">
 <meta property="og:type" content="website">
@@ -102,12 +102,13 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
 .hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
 
 /* Filters */
-.filters{display:flex;flex-direction:column;gap:14px}
-.filter{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0;padding:0;border:0;min-width:0}
-.filter legend{float:left;width:96px;padding:0;font-size:15px;font-weight:600}
-.chip{display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border-radius:18px;border:1px solid var(--grey-3);background:var(--white);color:var(--black);font:inherit;font-size:15px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.chip:hover{border-color:var(--black)}
-.chip[aria-pressed="true"]{background:var(--black);border-color:var(--black);color:var(--white)}
+.filters{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.filters-label{font-size:15px;font-weight:600;margin-right:4px}
+.select{appearance:none;-webkit-appearance:none;min-height:44px;padding:0 44px 0 20px;border-radius:22px;border:1px solid var(--grey-3);color:var(--black);font:inherit;font-size:15px;cursor:pointer;max-width:100%;
+  background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 18px center;transition:border-color .2s}
+.select:hover{border-color:var(--black)}
+.select:focus-visible{outline:2px solid var(--black);outline-offset:3px}
+.select.on{border-color:var(--black);box-shadow:inset 0 0 0 1px var(--black)}
 .card[hidden]{display:none}
 .empty{grid-column:1 / -1;font-size:clamp(18px,1.55vw,22px);color:var(--text-2)}
 .empty[hidden]{display:none}
@@ -169,7 +170,7 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
   .contact-main,.contact-side{grid-column:1 / -1}
 }
 @media (max-width:760px){
-  .filter legend{width:100%;margin-bottom:2px}
+  .filters-label{width:100%}
   .grid{grid-template-columns:1fr}
   .brand span{display:none}
 }
@@ -229,22 +230,22 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
     <h1 class="h1">Trabajos<br> seleccionados</h1>
     <div class="hero-row">
       <p class="lead">Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones. Una selección de lo que hemos hecho en THE GASP COMPANY®.</p>
-      <div class="filters" aria-label="Filtrar proyectos">
-        <fieldset class="filter" data-filter="uni">
-          <legend>Universidad</legend>
-          <button type="button" class="chip" data-value="" aria-pressed="true">Todas</button>
-          <button type="button" class="chip" data-value="ucm" aria-pressed="false">UCM</button>
-          <button type="button" class="chip" data-value="uned" aria-pressed="false">UNED</button>
-          <button type="button" class="chip" data-value="loyola" aria-pressed="false">Loyola</button>
-          <button type="button" class="chip" data-value="sapienza" aria-pressed="false">Sapienza</button>
-        </fieldset>
-        <fieldset class="filter" data-filter="type">
-          <legend>Tipo</legend>
-          <button type="button" class="chip" data-value="" aria-pressed="true">Todos</button>
-          <button type="button" class="chip" data-value="identidad" aria-pressed="false">Identidad</button>
-          <button type="button" class="chip" data-value="web" aria-pressed="false">Web</button>
-          <button type="button" class="chip" data-value="eventos" aria-pressed="false">Eventos</button>
-        </fieldset>
+      <div class="filters">
+        <span class="filters-label" id="filters-label">Filtrar por:</span>
+        <select class="select" data-filter="uni" aria-labelledby="filters-label uni-label">
+          <option value="">Todas las universidades</option>
+          <option value="ucm">Universidad Complutense de Madrid</option>
+          <option value="uned">UNED</option>
+          <option value="loyola">Universidad Loyola</option>
+          <option value="sapienza">Sapienza Università di Roma</option>
+        </select>
+        <select class="select" data-filter="type" aria-labelledby="filters-label type-label">
+          <option value="">Todos los tipos</option>
+          <option value="identidad">Identidad</option>
+          <option value="web">Web</option>
+          <option value="eventos">Eventos</option>
+        </select>
+        <span id="uni-label" hidden>Universidad</span><span id="type-label" hidden>Tipo de proyecto</span>
       </div>
     </div>
   </section>
@@ -408,24 +409,20 @@ window.gaspGlass=(function(){
   gaspGlass.attach(document.querySelector('.nav'));
 });
 
-/* Project filters: one choice per group, groups combine */
+/* Project filters: the two dropdowns combine */
 (function(){
-  var cards=document.querySelectorAll('.card'), empty=document.querySelector('.empty'), state={uni:'',type:''};
+  var cards=document.querySelectorAll('.card'), empty=document.querySelector('.empty'), selects=document.querySelectorAll('.filters .select');
   function apply(){
-    var shown=0;
+    var uni=selects[0].value, type=selects[1].value, shown=0;
     cards.forEach(function(c){
-      var ok=(!state.uni||c.dataset.uni===state.uni)&&(!state.type||c.dataset.type.split(' ').indexOf(state.type)>-1);
+      var ok=(!uni||c.dataset.uni===uni)&&(!type||c.dataset.type.split(' ').indexOf(type)>-1);
       c.hidden=!ok; if(ok) shown++;
     });
+    selects.forEach(function(s){s.classList.toggle('on',!!s.value);});
     empty.hidden=shown>0;
   }
-  document.querySelectorAll('.filter').forEach(function(group){
-    group.addEventListener('click',function(e){
-      var b=e.target.closest('.chip'); if(!b) return;
-      group.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-      state[group.dataset.filter]=b.dataset.value; apply();
-    });
-  });
+  selects.forEach(function(s){s.addEventListener('change',apply);});
+  apply(); // browsers may restore a previous choice on back/forward
 })();
 
 /* Privacy modal */

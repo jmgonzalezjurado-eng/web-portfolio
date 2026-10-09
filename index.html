@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/NeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio: identidad visual, webs y eventos | THE GASP COMPANY</title>
+<link rel="canonical" href="https://portfolio.thegasp.eu/">
+<meta name="description" content="Portfolio de THE GASP COMPANY®: identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
+<meta property="og:title" content="Portfolio: identidad visual, webs y eventos | THE GASP COMPANY">
+<meta property="og:description" content="Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
+<meta property="og:url" content="https://portfolio.thegasp.eu/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="THE GASP COMPANY">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://portfolio.thegasp.eu/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="THE GASP COMPANY®: Your science is amazing, let’s share it with the world!">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Portfolio de THE GASP COMPANY",
+  "url": "https://portfolio.thegasp.eu/",
+  "inLanguage": "es",
+  "publisher": {
+    "@type": "ProfessionalService",
+    "name": "THE GASP COMPANY",
+    "url": "https://thegasp.eu",
+    "email": "info@thegasp.eu",
+    "founder": {"@type": "Person", "name": "Javier González-Jurado"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"}
+  },
+  "hasPart": [
+    {"@type": "CreativeWork", "name": "CORELIN", "url": "https://portfolio.thegasp.eu/work/corelin/"},
+    {"@type": "CreativeWork", "name": "ENDIVERSIDAD55+", "url": "https://portfolio.thegasp.eu/work/endiversidad55/"},
+    {"@type": "CreativeWork", "name": "PBiS", "url": "https://portfolio.thegasp.eu/work/pbis/"},
+    {"@type": "CreativeWork", "name": "APOYO+65", "url": "https://portfolio.thegasp.eu/work/apoyo-65/"},
+    {"@type": "CreativeWork", "name": "Soleto Summer School", "url": "https://portfolio.thegasp.eu/work/soleto/"}
+  ]
+}
+</script>
+<style>
+@font-face{font-family:'Neue Montreal';src:url('/fonts/NeueMontreal-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Neue Montreal';src:url('/fonts/NeueMontreal-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Neue Montreal';src:url('/fonts/NeueMontreal-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{
+  --black:#000;--white:#fff;--grey-1:#f4f4f4;--grey-2:#e6e6e6;--grey-3:#c4c4c4;
+  --text-2:#3d3d3d;--text-3:#595959;--on-black-2:#d4d4d4;--line-dark:#4a4a4a;
+  --pad:clamp(20px,5.5vw,80px);--section:clamp(72px,9vw,120px);
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--black);font-family:'Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{max-width:100%}
+h1,h2,h3,p,ul{margin:0}
+.wrap{padding-inline:var(--pad)}
+.logo{fill:currentColor;display:block;flex-shrink:0}
+
+/* Type */
+.h1{font-size:clamp(48px,7.4vw,112px);line-height:.96;font-weight:500;letter-spacing:-.03em}
+.lead{font-size:clamp(18px,1.55vw,22px);line-height:1.5;color:var(--text-2);max-width:40ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;min-height:56px;padding:0 28px;border-radius:28px;font-size:17px;font-weight:600;text-decoration:none;border:1.5px solid var(--black);transition:background .2s,color .2s}
+.btn-solid{background:var(--black);color:var(--white)}
+.btn-solid:hover{background:var(--white);color:var(--black)}
+.btn-white{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn-white:hover{background:transparent;color:var(--white)}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+
+/* Nav */
+/* Liquid glass header: floating pill. Chromium gets SVG refraction, other browsers a frosted fallback */
+.nav{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));z-index:20;margin:12px var(--pad) 0;border-radius:36px;
+  background:rgba(255,255,255,.55);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.9),inset 0 -1px 2px rgba(255,255,255,.35),inset 0 0 0 1px rgba(0,0,0,.08),0 12px 32px rgba(0,0,0,.12)}
+.nav.glass{background:rgba(255,255,255,.42)}
+.nav .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px;padding-inline:clamp(14px,1.8vw,28px) clamp(10px,1vw,14px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-size:17px;font-weight:700;letter-spacing:0}
+.nav-links{display:flex;align-items:center;gap:32px;font-size:16px}
+.nav-links a:not(.btn){text-decoration:none}
+.nav-links a:not(.btn):hover{text-decoration:underline;text-underline-offset:4px}
+.nav-links .btn{min-height:44px;padding:0 22px;font-size:16px}
+
+/* Marquee */
+.marquee{overflow:hidden;padding-block:clamp(14px,1.6vw,22px);background:var(--black);color:var(--white);border-block:1px solid var(--line-dark)}
+.marquee-track{display:flex;width:max-content;animation:loop 40s linear infinite}
+.marquee-group{display:flex;flex-shrink:0}
+.marquee-item{display:inline-flex;align-items:center;gap:clamp(16px,2vw,28px);padding-right:clamp(16px,2vw,28px);flex-shrink:0}
+.marquee-item span{font-size:clamp(30px,3.9vw,56px);line-height:1;font-weight:500;letter-spacing:-.035em;white-space:nowrap}
+.marquee-item svg{width:clamp(22px,2.6vw,38px);height:auto}
+@keyframes loop{to{transform:translateX(-50%)}}
+
+/* Hero */
+.hero{padding-top:clamp(56px,6vw,88px);display:flex;flex-direction:column;gap:40px}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.count{font-size:15px;font-weight:600}
+
+/* Work grid */
+.work{padding-block:clamp(64px,7vw,96px) var(--section)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:clamp(48px,5vw,72px);padding-top:24px;border-top:1px solid var(--black)}
+.card{display:flex;flex-direction:column;gap:20px;text-decoration:none}
+.thumb{position:relative;aspect-ratio:8 / 5;border-radius:10px;overflow:hidden;background:var(--c,var(--grey-1))}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .thumb img{transform:scale(1.035)}
+.card-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.card-name{font-size:clamp(24px,2.1vw,30px);font-weight:700}
+.card:hover .card-name{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.card-year{font-size:16px;color:var(--text-3)}
+.card-desc{font-size:18px;line-height:1.5;color:var(--text-2);max-width:44ch;margin-top:-8px}
+.card-meta{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;min-height:32px;padding:0 14px;border-radius:16px;border:1px solid var(--grey-3);font-size:14px;color:var(--text-2)}
+.tag-client{background:var(--grey-1);border-color:var(--grey-1)}
+
+/* Footer */
+.footer{background:var(--black);color:var(--white);padding-top:var(--section);padding-bottom:calc(48px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:80px}
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px}
+.contact{align-items:end}
+.contact-main{grid-column:span 8;display:flex;flex-direction:column;gap:28px}
+.contact-main h2{font-size:clamp(44px,6.1vw,88px);line-height:.96;font-weight:500;letter-spacing:-.03em}
+.contact-main p{font-size:clamp(17px,1.3vw,19px);line-height:1.55;color:var(--on-black-2);max-width:46ch}
+.contact-side{grid-column:9 / span 4;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.contact-side a:not(.btn){font-size:19px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;font-size:15px;color:#bdbdbd}
+.foot a{color:var(--white)}
+.foot .brand{color:var(--white)}
+.legal{display:flex;gap:20px;flex-wrap:wrap}
+.legal-link{font:inherit;font-size:15px;color:var(--white);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.legal-link:hover{color:#bdbdbd}
+
+/* Privacy modal */
+.privacy{width:min(680px,calc(100vw - 32px));max-height:min(80vh,760px);padding:0;border:0;border-radius:20px;background:var(--white);color:var(--black);box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.privacy::backdrop{background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.privacy-in{padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:18px}
+.privacy-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.privacy h2{margin:0;font-size:clamp(28px,3vw,36px);line-height:1.05;font-weight:500;letter-spacing:-.02em}
+.privacy h3{margin:14px 0 0;font-size:18px;font-weight:700}
+.privacy p{margin:0;font-size:16px;line-height:1.6;color:var(--text-2)}
+.privacy small{font-size:14px;color:var(--text-3)}
+.x{flex-shrink:0;width:44px;height:44px;border-radius:22px;border:1.5px solid var(--black);background:var(--white);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+.x:hover{background:var(--black);color:var(--white)}
+
+/* Cursor */
+.cursor{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:100;opacity:0;transition:width .2s,height .2s,margin .2s,opacity .2s;will-change:transform}
+.cursor.on{opacity:1}
+.cursor.big{width:44px;height:44px;margin:-22px 0 0 -22px}
+@media (hover:hover) and (pointer:fine){
+  html.has-cursor,html.has-cursor *{cursor:none!important}
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  .contact-main,.contact-side{grid-column:1 / -1}
+}
+@media (max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marquee-track{animation:none}
+  .btn,.thumb img{transition:none}
+  .card:hover .thumb img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gasp" viewBox="0 0 428.89 428.89">
+    <path d="M214.45,428.89c-57.28,0-111.13-22.31-151.64-62.81C22.31,325.58,0,271.73,0,214.45S22.31,103.31,62.81,62.81C103.31,22.31,157.17,0,214.45,0s111.13,22.31,151.64,62.81c40.5,40.5,62.81,94.36,62.81,151.64s-22.31,111.13-62.81,151.64c-40.5,40.5-94.36,62.81-151.64,62.81ZM214.45,40c-96.19,0-174.45,78.26-174.45,174.45s78.26,174.45,174.45,174.45,174.45-78.26,174.45-174.45S310.64,40,214.45,40Z"/>
+    <path d="M285.71,258.02c-39.68,0-78.43-10.92-112.08-31.59l20.93-34.08c27.35,16.8,58.87,25.68,91.15,25.68,40.36,0,78.24-13.38,109.56-38.69l25.14,31.11c-37.96,30.68-85.8,47.58-134.7,47.58Z"/>
+    <path d="M195.14,346.32l-20.8-34.17c33.48-20.38,71.99-31.15,111.37-31.15,34.34,0,68.51,8.32,98.79,24.07l-18.45,35.49c-24.96-12.98-51.99-19.56-80.34-19.56-32.04,0-63.36,8.76-90.57,25.32Z"/>
+    <rect x="164.75" y="148.72" width="40" height="258.46"/>
+    <polygon points="52.04 317.22 29.1 284.45 88.97 242.53 88.97 51.21 128.97 51.21 128.97 263.35 52.04 317.22"/>
+    <rect x="85.51" y="105.42" width="259.12" height="40" transform="translate(-33.04 146.04) rotate(-35)"/>
+  </symbol>
+</svg>
+
+<!-- Liquid glass filter: displacement map + per-channel chromatic aberration -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="glass-filter" x="0" y="0" width="100%" height="100%" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feImage id="fmap" href="" x="0" y="0" width="100" height="100" preserveAspectRatio="none" result="map"/>
+    <feDisplacementMap id="dR" in="SourceGraphic" in2="map" scale="66" xChannelSelector="R" yChannelSelector="G" result="dispR"/>
+    <feColorMatrix in="dispR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="R"/>
+    <feDisplacementMap id="dG" in="SourceGraphic" in2="map" scale="60" xChannelSelector="R" yChannelSelector="G" result="dispG"/>
+    <feColorMatrix in="dispG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="G"/>
+    <feDisplacementMap id="dB" in="SourceGraphic" in2="map" scale="54" xChannelSelector="R" yChannelSelector="G" result="dispB"/>
+    <feColorMatrix in="dispB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="B"/>
+    <feBlend in="R" in2="G" mode="screen" result="RG"/>
+    <feBlend in="RG" in2="B" mode="screen" result="out"/>
+    <feGaussianBlur in="out" stdDeviation="1.5"/>
+  </filter>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="THE GASP COMPANY, volver arriba">
+      <svg class="logo" width="40" height="40"><use href="#gasp"/></svg>
+      <span>THE GASP COMPANY®</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#trabajos">Proyectos</a>
+      <a class="btn btn-solid" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="wrap hero">
+    <h1 class="h1">Trabajos<br> seleccionados</h1>
+    <div class="hero-row">
+      <p class="lead">Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones. Una selección de lo que hemos hecho en THE GASP COMPANY®.</p>
+      <p class="count">05 proyectos</p>
+    </div>
+  </section>
+
+  <section id="trabajos" class="wrap work" aria-label="Proyectos">
+    <div class="grid">
+      <a class="card" href="/work/corelin/">
+        <div class="thumb" style="--c:#b3c7be"><img src="/work/corelin/img/logo.webp" width="2400" height="1561" alt="Logotipo de CORELIN en verde sobre fondo salvia"></div>
+        <div class="card-top"><h2 class="card-name">CORELIN</h2><span class="card-year">2026</span></div>
+        <p class="card-desc">Religiosidad e integración social de las personas inmigrantes en España</p>
+        <div class="card-meta"><span class="tag tag-client">UNED</span><span class="tag">Identidad</span><span class="tag">Web</span></div>
+      </a>
+      <a class="card" href="/work/endiversidad55/">
+        <div class="thumb" style="--c:#f3dc65"><img src="/work/endiversidad55/img/logo.webp" width="2400" height="1561" alt="Logotipo de ENDIVERSIDAD55+ en verde oscuro sobre fondo amarillo"></div>
+        <div class="card-top"><h2 class="card-name">ENDIVERSIDAD55+</h2><span class="card-year">2026</span></div>
+        <p class="card-desc">Envejecimiento, soledad y diversidad en las personas mayores migrantes de origen latinoamericano</p>
+        <div class="card-meta"><span class="tag tag-client">Universidad Complutense de Madrid</span><span class="tag">Identidad</span><span class="tag">Web</span><span class="tag">Eventos</span></div>
+      </a>
+      <a class="card" href="/work/pbis/">
+        <div class="thumb" style="--c:#f6f2eb"><img src="/work/pbis/img/logo.webp" width="2400" height="1501" loading="lazy" alt="Logotipo de PBiS en coral sobre fondo crema"></div>
+        <div class="card-top"><h2 class="card-name">PBiS</h2><span class="card-year">2026</span></div>
+        <p class="card-desc">Convivencia escolar y detección temprana del riesgo relacional</p>
+        <div class="card-meta"><span class="tag tag-client">Universidad Loyola</span><span class="tag">Identidad</span><span class="tag">Web</span></div>
+      </a>
+      <a class="card" href="/work/apoyo-65/">
+        <div class="thumb" style="--c:#a6a85e"><img src="/work/apoyo-65/img/logo.webp" width="2400" height="1473" loading="lazy" alt="Logotipo de APOYO+65 en verde oscuro sobre fondo oliva"></div>
+        <div class="card-top"><h2 class="card-name">APOYO+65</h2><span class="card-year">2024</span></div>
+        <p class="card-desc">Soledad y bienestar en las personas mayores en España</p>
+        <div class="card-meta"><span class="tag tag-client">Universidad Complutense de Madrid</span><span class="tag">Identidad</span><span class="tag">Web</span><span class="tag">Eventos</span></div>
+      </a>
+      <a class="card" href="/work/soleto/">
+        <div class="thumb" style="--c:#94a8b3"><img src="/work/soleto/img/cover.webp" width="1600" height="900" loading="lazy" alt="Cartel de la Soleto Summer School con un sol amarillo sobre cielo azul"></div>
+        <div class="card-top"><h2 class="card-name">Soleto Summer School</h2><span class="card-year">2023</span></div>
+        <p class="card-desc">Escuela de verano y workshop sobre experimetría y economía del comportamiento</p>
+        <div class="card-meta"><span class="tag tag-client">Sapienza Università di Roma</span><span class="tag">Identidad</span><span class="tag">Redes sociales</span><span class="tag">Evento</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contacto" class="footer">
+  <div class="wrap split contact">
+    <div class="contact-main">
+      <h2>Cuéntanos tu proyecto</h2>
+      <p>Escríbenos con una idea de lo que necesitas. Te respondemos en dos días laborables con una primera propuesta de alcance y presupuesto.</p>
+    </div>
+    <div class="contact-side">
+      <a class="btn btn-white" href="mailto:info@thegasp.eu?subject=Nuevo%20proyecto">Escríbenos</a>
+      <a href="mailto:info@thegasp.eu">info@thegasp.eu</a>
+    </div>
+  </div>
+  <section class="marquee" aria-label="THE GASP COMPANY">
+    <div class="marquee-track" aria-hidden="true">
+      <div class="marquee-group">
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+      </div>
+      <div class="marquee-group">
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+        <span class="marquee-item"><span>THE GASP COMPANY®</span><svg class="logo" viewBox="0 0 428.89 428.89"><use href="#gasp"/></svg></span>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top"><svg class="logo" width="32" height="32"><use href="#gasp"/></svg><span>THE GASP COMPANY®</span></a>
+      <span>©2022 – 2026 Javier González-Jurado · THE GASP COMPANY®. Todos los derechos reservados.</span>
+      <span class="legal"><button type="button" class="legal-link" data-open-privacy>Política de privacidad</button></span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="privacy" id="privacidad" aria-labelledby="privacy-title">
+  <div class="privacy-in">
+    <div class="privacy-head">
+      <h2 id="privacy-title">Política de privacidad</h2>
+      <button type="button" class="x" data-close-privacy aria-label="Cerrar">×</button>
+    </div>
+    <small>Última actualización: octubre de 2026</small>
+
+    <h3>Responsable</h3>
+    <p>Esta web la gestiona Javier González-Jurado, que opera como THE GASP COMPANY®, con sede en Madrid (España). Para cualquier consulta sobre privacidad, escribe a <a href="mailto:info@thegasp.eu">info@thegasp.eu</a>.</p>
+
+    <h3>Cookies y analítica</h3>
+    <p>Esta web no usa cookies ni herramientas de analítica. No tiene formularios, cuentas de usuario ni publicidad.</p>
+
+    <h3>Si nos escribes</h3>
+    <p>Si escribes a info@thegasp.eu, usamos tu nombre, tu correo y lo que nos cuentes solo para responderte y, si acabamos trabajando juntos, para preparar un presupuesto o un contrato. No te añadimos a ninguna lista de correo. Puedes pedirnos que borremos esa correspondencia en cualquier momento.</p>
+
+    <h3>Alojamiento</h3>
+    <p>La web está alojada en GitHub Pages. Como cualquier servidor, GitHub puede registrar datos técnicos, como tu dirección IP, por motivos de seguridad y para mantener el servicio. No tenemos acceso a esos registros ni los usamos. Consulta la declaración de privacidad de GitHub para más detalles.</p>
+
+    <h3>Tus derechos</h3>
+    <p>De acuerdo con el RGPD, puedes pedir el acceso, la rectificación o la supresión de los datos personales que tengamos sobre ti, u oponerte a su uso, escribiendo a info@thegasp.eu. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (aepd.es).</p>
+  </div>
+</dialog>
+
+<div class="cursor" aria-hidden="true"></div>
+
+<script>
+(function(){
+  if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var dot=document.querySelector('.cursor');
+  document.documentElement.classList.add('has-cursor');
+  var x=-100,y=-100,ticking=false;
+  function paint(){dot.style.transform='translate3d('+x+'px,'+y+'px,0)';ticking=false;}
+  document.addEventListener('mousemove',function(e){
+    x=e.clientX;y=e.clientY;
+    // Modal dialogs sit in the top layer above any z-index, so the dot has to live inside the open one
+    var host=document.querySelector('dialog[open]')||document.body;
+    if(dot.parentNode!==host) host.appendChild(dot);
+    dot.classList.add('on');
+    dot.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button')));
+    if(!ticking){ticking=true;requestAnimationFrame(paint);}
+  });
+  document.addEventListener('mouseleave',function(){dot.classList.remove('on');});
+  document.addEventListener('mouseenter',function(){dot.classList.add('on');});
+})();
+</script>
+<script>
+/* Liquid glass (Chromium only: other browsers can't use SVG filters in backdrop-filter, so they keep the frosted fallback) */
+window.gaspGlass=(function(){
+  var uad=navigator.userAgentData;
+  // userAgentData only exists on HTTPS, so fall back to the user-agent string (Chrome, Edge, Opera, Brave; not iOS, which is WebKit)
+  var ok=!!((uad&&uad.brands&&uad.brands.some(function(b){return /Chromium/.test(b.brand);}))||/\bChrome\/\d+/.test(navigator.userAgent));
+  var tpl=document.getElementById('glass-filter'), n=0, DEPTH=16;
+  function map(w,h,r){
+    var hw=w/2,hh=h/2,c=document.createElement('canvas');c.width=w;c.height=h;
+    var ctx=c.getContext('2d'),img=ctx.createImageData(w,h),d=img.data;
+    function sdf(px,py){var qx=Math.abs(px)-(hw-r),qy=Math.abs(py)-(hh-r);return Math.hypot(Math.max(qx,0),Math.max(qy,0))+Math.min(Math.max(qx,qy),0)-r;}
+    for(var y=0;y<h;y++){for(var x=0;x<w;x++){
+      var px=x-hw+.5,py=y-hh+.5,dist=sdf(px,py);
+      var gx=sdf(px+1,py)-sdf(px-1,py),gy=sdf(px,py+1)-sdf(px,py-1),gl=Math.hypot(gx,gy)||1;
+      var t=1-Math.min(Math.max(-dist/DEPTH,0),1);t=t*t*(3-2*t);
+      var a=dist<0?t:0,i=(y*w+x)*4;
+      d[i]=128+gx/gl*a*127;d[i+1]=128+gy/gl*a*127;d[i+2]=128;d[i+3]=255;
+    }}
+    ctx.putImageData(img,0,0);return c.toDataURL();
+  }
+  function attach(el,pre){
+    if(!ok) return;
+    var f=tpl.cloneNode(true), id='glass-filter-'+(++n); f.id=id; tpl.parentNode.appendChild(f);
+    var img=f.querySelector('feImage');
+    function build(){
+      var w=Math.round(el.offsetWidth),h=Math.round(el.offsetHeight); if(!w||!h) return;
+      var r=Math.min(parseFloat(getComputedStyle(el).borderTopLeftRadius)||0,h/2,w/2);
+      img.setAttribute('href',map(w,h,r));img.setAttribute('width',w);img.setAttribute('height',h);
+      el.classList.add('glass');
+      el.style.backdropFilter=el.style.webkitBackdropFilter=(pre?pre+' ':'')+'url(#'+id+')';
+    }
+    var tid;window.addEventListener('resize',function(){clearTimeout(tid);tid=setTimeout(build,150);});
+    build(); return build;
+  }
+  return {attach:attach};
+})();
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){
+  gaspGlass.attach(document.querySelector('.nav'));
+});
+
+/* Privacy modal */
+(function(){
+  var dlg=document.getElementById('privacidad');
+  document.querySelectorAll('[data-open-privacy]').forEach(function(b){b.addEventListener('click',function(){dlg.showModal();});});
+  dlg.querySelector('[data-close-privacy]').addEventListener('click',function(){dlg.close();});
+  dlg.addEventListener('click',function(e){if(e.target===dlg) dlg.close();});
+  // Case studies link here as /#privacidad
+  if(location.hash==='#privacidad') dlg.showModal();
+})();
+</script>
+</body>
+</html>

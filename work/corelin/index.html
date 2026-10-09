@@ -74,11 +74,14 @@ h1{font-size:clamp(48px,7.4vw,112px);line-height:.96;font-weight:500;letter-spac
 .btn-lg{min-height:56px;padding:0 28px;border-radius:28px;font-size:17px}
 /* Reach: audience figures */
 .cs-sec[hidden]{display:none}
-.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-block:32px;border-block:1px solid #000}
+.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-top:32px;border-top:1px solid #000}
 .reach div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px}
 .reach dd{margin:0;font-size:clamp(48px,6vw,96px);line-height:.95;font-weight:500;letter-spacing:-.03em}
 .reach dt{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:18ch}
 .reach-src{margin-top:-16px;font-size:15px;color:#595959}
+.reach-live{display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid #000}
+.reach-live b{font-size:clamp(34px,3.7vw,54px);line-height:1.03;font-weight:500;letter-spacing:-.02em}
+.reach-live span{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:40ch}
 @media (max-width:900px){.reach{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
 @media (max-width:900px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -179,17 +182,13 @@ footer{background:#000;color:#bdbdbd;padding-block:40px calc(40px + env(safe-are
     </div>
   </section>
 
-  <section class="wrap cs-sec" aria-labelledby="reach" hidden>
+  <section class="wrap cs-sec" aria-labelledby="reach">
     <div class="cs-head">
       <span class="num">03</span>
       <h2 id="reach">Alcance</h2>
       <p>A cuántas personas llegó el proyecto.</p>
     </div>
-    <dl class="reach">
-      <div><dt>visitas a la web</dt><dd>—</dd></div>
-      <div><dt>usuarios únicos</dt><dd>—</dd></div>
-    </dl>
-    <p class="reach-src">PENDIENTE: fuente y fechas</p>
+    <p class="reach-live"><b>Proyecto en marcha</b><span>Publicaremos las cifras de alcance cuando el proyecto tenga datos relevantes.</span></p>
   </section>
 
   <div class="wrap">

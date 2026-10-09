@@ -74,11 +74,15 @@ h1{font-size:clamp(48px,7.4vw,112px);line-height:.96;font-weight:500;letter-spac
 .btn-lg{min-height:56px;padding:0 28px;border-radius:28px;font-size:17px}
 /* Reach: audience figures */
 .cs-sec[hidden]{display:none}
-.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-block:32px;border-block:1px solid #000}
+.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-top:32px;border-top:1px solid #000}
 .reach div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px}
 .reach dd{margin:0;font-size:clamp(48px,6vw,96px);line-height:.95;font-weight:500;letter-spacing:-.03em}
 .reach dt{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:18ch}
 .reach-src{margin-top:-16px;font-size:15px;color:#595959}
+.press{display:flex;flex-direction:column;gap:16px}
+.press h3{margin:0;font-size:15px;font-weight:600}
+.press ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font-size:clamp(20px,2vw,28px);line-height:1.3;font-weight:500;letter-spacing:-.01em}
+.press li:not(:last-child)::after{content:"·";margin-inline:.45em;color:#c4c4c4}
 @media (max-width:900px){.reach{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
 @media (max-width:900px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -188,16 +192,21 @@ footer{background:#000;color:#bdbdbd;padding-block:40px calc(40px + env(safe-are
     </div>
   </section>
 
-  <section class="wrap cs-sec" aria-labelledby="reach" hidden>
+  <section class="wrap cs-sec" aria-labelledby="reach">
     <div class="cs-head">
       <span class="num">03</span>
       <h2 id="reach">Alcance</h2>
       <p>A cuántas personas llegó el proyecto.</p>
     </div>
     <dl class="reach">
-      <div><dt>asistentes a la jornada</dt><dd>—</dd></div>
+      <div><dt>asistentes a la jornada</dt><dd>+80</dd></div>
+      <div><dt>medios de comunicación</dt><dd>22</dd></div>
+      <div><dt>en valor publicitario de la aparición en medios</dt><dd>+1,5 M€</dd></div>
     </dl>
-    <p class="reach-src">PENDIENTE: fuente y fechas</p>
+    <div class="press">
+      <h3>En los medios</h3>
+      <ul><li>El País</li><li>ABC</li><li>Telecinco</li><li>Europa Press</li><li>Onda Cero</li><li>El Debate</li><li>Heraldo</li><li>Faro de Vigo</li><li>El Diario de la Educación</li><li>Diario de Sevilla</li><li>Diario de Cádiz</li><li>Málaga Hoy</li><li>Granada Hoy</li><li>Diario de Jerez</li><li>Diario de Almería</li><li>Huelva Información</li><li>Europa Sur</li><li>El Día de Córdoba</li><li>Córdoba BN</li><li>Salamanca 24 Horas</li><li>Noticias Leganés</li><li>Canal UGR</li></ul>
+    </div>
   </section>
 
   <div class="wrap">

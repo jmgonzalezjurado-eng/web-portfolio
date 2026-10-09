@@ -70,6 +70,14 @@ h1{font-size:clamp(48px,7.4vw,112px);line-height:.96;font-weight:500;letter-spac
 .next b{font-size:clamp(40px,5.2vw,80px);line-height:.98;font-weight:500;letter-spacing:-.03em}
 .next:hover b{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
 .btn-lg{min-height:56px;padding:0 28px;border-radius:28px;font-size:17px}
+/* Reach: audience figures */
+.cs-sec[hidden]{display:none}
+.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-block:32px;border-block:1px solid #000}
+.reach div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px}
+.reach dd{margin:0;font-size:clamp(48px,6vw,96px);line-height:.95;font-weight:500;letter-spacing:-.03em}
+.reach dt{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:18ch}
+.reach-src{margin-top:-16px;font-size:15px;color:#595959}
+@media (max-width:900px){.reach{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
 @media (max-width:900px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-head .num,.cs-head h2,.cs-head p{grid-column:1 / -1}
@@ -185,6 +193,20 @@ footer{background:#000;color:#bdbdbd;padding-block:40px calc(40px + env(safe-are
         <figure class="media light" style="background:#fff"><img src="img/merch.webp" width="2400" height="1473" loading="lazy" alt="Libreta y bolígrafo negros con el logotipo de APOYO+65"></figure>
       </div>
     </div>
+  </section>
+
+  <section class="wrap cs-sec" aria-labelledby="reach" hidden>
+    <div class="cs-head">
+      <span class="num">04</span>
+      <h2 id="reach">Alcance</h2>
+      <p>A cuántas personas llegó el proyecto.</p>
+    </div>
+    <dl class="reach">
+      <div><dt>visitas a la web</dt><dd>—</dd></div>
+      <div><dt>asistentes a las jornadas</dt><dd>—</dd></div>
+      <div><dt>visualizaciones en YouTube</dt><dd>—</dd></div>
+    </dl>
+    <p class="reach-src">PENDIENTE: fuente y fechas</p>
   </section>
 
   <div class="wrap">

@@ -5,10 +5,10 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/NeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portfolio: identidad visual, webs y eventos | THE GASP COMPANY</title>
+<title>PORTFOLIO - THE GASP COMPANY®</title>
 <link rel="canonical" href="https://portfolio.thegasp.eu/">
 <meta name="description" content="Portfolio de THE GASP COMPANY®: identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
-<meta property="og:title" content="Portfolio: identidad visual, webs y eventos | THE GASP COMPANY">
+<meta property="og:title" content="PORTFOLIO - THE GASP COMPANY®">
 <meta property="og:description" content="Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones.">
 <meta property="og:url" content="https://portfolio.thegasp.eu/">
 <meta property="og:type" content="website">
@@ -100,7 +100,17 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
 /* Hero */
 .hero{padding-top:clamp(56px,6vw,88px);display:flex;flex-direction:column;gap:40px}
 .hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
-.count{font-size:15px;font-weight:600}
+
+/* Filters */
+.filters{display:flex;flex-direction:column;gap:14px}
+.filter{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0;padding:0;border:0;min-width:0}
+.filter legend{float:left;width:96px;padding:0;font-size:15px;font-weight:600}
+.chip{display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border-radius:18px;border:1px solid var(--grey-3);background:var(--white);color:var(--black);font:inherit;font-size:15px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--black)}
+.chip[aria-pressed="true"]{background:var(--black);border-color:var(--black);color:var(--white)}
+.card[hidden]{display:none}
+.empty{grid-column:1 / -1;font-size:clamp(18px,1.55vw,22px);color:var(--text-2)}
+.empty[hidden]{display:none}
 
 /* Work grid */
 .work{padding-block:clamp(64px,7vw,96px) var(--section)}
@@ -159,6 +169,7 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
   .contact-main,.contact-side{grid-column:1 / -1}
 }
 @media (max-width:760px){
+  .filter legend{width:100%;margin-bottom:2px}
   .grid{grid-template-columns:1fr}
   .brand span{display:none}
 }
@@ -218,42 +229,59 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
     <h1 class="h1">Trabajos<br> seleccionados</h1>
     <div class="hero-row">
       <p class="lead">Identidad visual, webs, eventos y comunicación para proyectos de investigación, universidades e instituciones. Una selección de lo que hemos hecho en THE GASP COMPANY®.</p>
-      <p class="count">05 proyectos</p>
+      <div class="filters" aria-label="Filtrar proyectos">
+        <fieldset class="filter" data-filter="uni">
+          <legend>Universidad</legend>
+          <button type="button" class="chip" data-value="" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-value="ucm" aria-pressed="false">UCM</button>
+          <button type="button" class="chip" data-value="uned" aria-pressed="false">UNED</button>
+          <button type="button" class="chip" data-value="loyola" aria-pressed="false">Loyola</button>
+          <button type="button" class="chip" data-value="sapienza" aria-pressed="false">Sapienza</button>
+        </fieldset>
+        <fieldset class="filter" data-filter="type">
+          <legend>Tipo</legend>
+          <button type="button" class="chip" data-value="" aria-pressed="true">Todos</button>
+          <button type="button" class="chip" data-value="identidad" aria-pressed="false">Identidad</button>
+          <button type="button" class="chip" data-value="web" aria-pressed="false">Web</button>
+          <button type="button" class="chip" data-value="eventos" aria-pressed="false">Eventos</button>
+        </fieldset>
+      </div>
     </div>
   </section>
 
   <section id="trabajos" class="wrap work" aria-label="Proyectos">
     <div class="grid">
-      <a class="card" href="/work/corelin/">
+      <a class="card" href="/work/corelin/" data-uni="uned" data-type="identidad web">
         <div class="thumb" style="--c:#b3c7be"><img src="/work/corelin/img/logo.webp" width="2400" height="1561" alt="Logotipo de CORELIN en verde sobre fondo salvia"></div>
         <div class="card-top"><h2 class="card-name">CORELIN</h2><span class="card-year">2026</span></div>
         <p class="card-desc">Religiosidad e integración social de las personas inmigrantes en España</p>
         <div class="card-meta"><span class="tag tag-client">UNED</span><span class="tag">Identidad</span><span class="tag">Web</span></div>
       </a>
-      <a class="card" href="/work/endiversidad55/">
+      <a class="card" href="/work/endiversidad55/" data-uni="ucm" data-type="identidad web eventos">
         <div class="thumb" style="--c:#f3dc65"><img src="/work/endiversidad55/img/logo.webp" width="2400" height="1561" alt="Logotipo de ENDIVERSIDAD55+ en verde oscuro sobre fondo amarillo"></div>
         <div class="card-top"><h2 class="card-name">ENDIVERSIDAD55+</h2><span class="card-year">2026</span></div>
         <p class="card-desc">Envejecimiento, soledad y diversidad en las personas mayores migrantes de origen latinoamericano</p>
         <div class="card-meta"><span class="tag tag-client">Universidad Complutense de Madrid</span><span class="tag">Identidad</span><span class="tag">Web</span><span class="tag">Eventos</span></div>
       </a>
-      <a class="card" href="/work/pbis/">
+      <a class="card" href="/work/pbis/" data-uni="loyola" data-type="identidad web">
         <div class="thumb" style="--c:#f6f2eb"><img src="/work/pbis/img/logo.webp" width="2400" height="1501" loading="lazy" alt="Logotipo de PBiS en coral sobre fondo crema"></div>
         <div class="card-top"><h2 class="card-name">PBiS</h2><span class="card-year">2026</span></div>
         <p class="card-desc">Convivencia escolar y detección temprana del riesgo relacional</p>
         <div class="card-meta"><span class="tag tag-client">Universidad Loyola</span><span class="tag">Identidad</span><span class="tag">Web</span></div>
       </a>
-      <a class="card" href="/work/apoyo-65/">
+      <a class="card" href="/work/apoyo-65/" data-uni="ucm" data-type="identidad web eventos">
         <div class="thumb" style="--c:#a6a85e"><img src="/work/apoyo-65/img/logo.webp" width="2400" height="1473" loading="lazy" alt="Logotipo de APOYO+65 en verde oscuro sobre fondo oliva"></div>
         <div class="card-top"><h2 class="card-name">APOYO+65</h2><span class="card-year">2024</span></div>
         <p class="card-desc">Soledad y bienestar en las personas mayores en España</p>
         <div class="card-meta"><span class="tag tag-client">Universidad Complutense de Madrid</span><span class="tag">Identidad</span><span class="tag">Web</span><span class="tag">Eventos</span></div>
       </a>
-      <a class="card" href="/work/soleto/">
+      <a class="card" href="/work/soleto/" data-uni="sapienza" data-type="identidad eventos">
         <div class="thumb" style="--c:#94a8b3"><img src="/work/soleto/img/cover.webp" width="1600" height="900" loading="lazy" alt="Cartel de la Soleto Summer School con un sol amarillo sobre cielo azul"></div>
         <div class="card-top"><h2 class="card-name">Soleto Summer School</h2><span class="card-year">2023</span></div>
         <p class="card-desc">Escuela de verano y workshop sobre experimetría y economía del comportamiento</p>
         <div class="card-meta"><span class="tag tag-client">Sapienza Università di Roma</span><span class="tag">Identidad</span><span class="tag">Redes sociales</span><span class="tag">Evento</span></div>
       </a>
+      <p class="empty" hidden>No hay proyectos con estos filtros todavía.</p>
     </div>
   </section>
 
@@ -379,6 +407,26 @@ window.gaspGlass=(function(){
 (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){
   gaspGlass.attach(document.querySelector('.nav'));
 });
+
+/* Project filters: one choice per group, groups combine */
+(function(){
+  var cards=document.querySelectorAll('.card'), empty=document.querySelector('.empty'), state={uni:'',type:''};
+  function apply(){
+    var shown=0;
+    cards.forEach(function(c){
+      var ok=(!state.uni||c.dataset.uni===state.uni)&&(!state.type||c.dataset.type.split(' ').indexOf(state.type)>-1);
+      c.hidden=!ok; if(ok) shown++;
+    });
+    empty.hidden=shown>0;
+  }
+  document.querySelectorAll('.filter').forEach(function(group){
+    group.addEventListener('click',function(e){
+      var b=e.target.closest('.chip'); if(!b) return;
+      group.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      state[group.dataset.filter]=b.dataset.value; apply();
+    });
+  });
+})();
 
 /* Privacy modal */
 (function(){

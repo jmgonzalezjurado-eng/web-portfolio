@@ -39,6 +39,7 @@
     {"@type": "CreativeWork", "name": "ENDIVERSIDAD55+", "url": "https://portfolio.thegasp.eu/work/endiversidad55/"},
     {"@type": "CreativeWork", "name": "PBiS", "url": "https://portfolio.thegasp.eu/work/pbis/"},
     {"@type": "CreativeWork", "name": "APOYO+65", "url": "https://portfolio.thegasp.eu/work/apoyo-65/"},
+    {"@type": "CreativeWork", "name": "Teens Lab", "url": "https://portfolio.thegasp.eu/work/teens-lab/"},
     {"@type": "CreativeWork", "name": "Soleto Summer School", "url": "https://portfolio.thegasp.eu/work/soleto/"}
   ]
 }
@@ -234,10 +235,14 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
         <span class="filters-label" id="filters-label">Filtrar por:</span>
         <select class="select" data-filter="uni" aria-labelledby="filters-label uni-label">
           <option value="">Todas las universidades</option>
-          <option value="ucm">Universidad Complutense de Madrid</option>
-          <option value="uned">UNED</option>
-          <option value="loyola">Universidad Loyola</option>
           <option value="sapienza">Sapienza Università di Roma</option>
+          <option value="uned">UNED</option>
+          <option value="uc3m">Universidad Carlos III de Madrid</option>
+          <option value="ucm">Universidad Complutense de Madrid</option>
+          <option value="ugr">Universidad de Granada</option>
+          <option value="upv">Universidad del País Vasco</option>
+          <option value="loyola">Universidad Loyola</option>
+          <option value="ub">Universitat de Barcelona</option>
         </select>
         <select class="select" data-filter="type" aria-labelledby="filters-label type-label">
           <option value="">Todos los tipos</option>
@@ -275,6 +280,12 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
         <div class="card-top"><h2 class="card-name">APOYO+65</h2><span class="card-year">2024</span></div>
         <p class="card-desc">Soledad y bienestar en las personas mayores en España</p>
         <div class="card-meta"><span class="tag tag-client">Universidad Complutense de Madrid</span><span class="tag">Identidad</span><span class="tag">Web</span><span class="tag">Eventos</span></div>
+      </a>
+      <a class="card" href="/work/teens-lab/" data-uni="loyola uc3m ub ugr upv" data-type="identidad eventos">
+        <div class="thumb" style="--c:#fcbf4a"><img src="/work/teens-lab/img/logo.webp" width="2400" height="1559" loading="lazy" alt="Logotipo de Teens Lab en blanco sobre fondo amarillo"></div>
+        <div class="card-top"><h2 class="card-name">Teens Lab</h2><span class="card-year">2023</span></div>
+        <p class="card-desc">Comportamiento económico de los adolescentes en España</p>
+        <div class="card-meta"><span class="tag tag-client">5 universidades</span><span class="tag">Identidad</span><span class="tag">Evento</span></div>
       </a>
       <a class="card" href="/work/soleto/" data-uni="sapienza" data-type="identidad eventos">
         <div class="thumb" style="--c:#94a8b3"><img src="/work/soleto/img/cover.webp" width="1600" height="900" loading="lazy" alt="Cartel de la Soleto Summer School con un sol amarillo sobre cielo azul"></div>
@@ -415,7 +426,7 @@ window.gaspGlass=(function(){
   function apply(){
     var uni=selects[0].value, type=selects[1].value, shown=0;
     cards.forEach(function(c){
-      var ok=(!uni||c.dataset.uni===uni)&&(!type||c.dataset.type.split(' ').indexOf(type)>-1);
+      var ok=(!uni||c.dataset.uni.split(' ').indexOf(uni)>-1)&&(!type||c.dataset.type.split(' ').indexOf(type)>-1);
       c.hidden=!ok; if(ok) shown++;
     });
     selects.forEach(function(s){s.classList.toggle('on',!!s.value);});

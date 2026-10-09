@@ -72,17 +72,26 @@ h1{font-size:clamp(48px,7.4vw,112px);line-height:.96;font-weight:500;letter-spac
 .next b{font-size:clamp(40px,5.2vw,80px);line-height:.98;font-weight:500;letter-spacing:-.03em}
 .next:hover b{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
 .btn-lg{min-height:56px;padding:0 28px;border-radius:28px;font-size:17px}
-/* Reach: audience figures */
-.cs-sec[hidden]{display:none}
-.reach{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:24px;margin:0;padding-top:32px;border-top:1px solid #000}
-.reach div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px}
-.reach dd{margin:0;font-size:clamp(48px,6vw,96px);line-height:.95;font-weight:500;letter-spacing:-.03em}
-.reach dt{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:18ch}
-.reach-src{margin-top:-16px;font-size:15px;color:#595959}
-.reach-live{display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid #000}
-.reach-live b{font-size:clamp(34px,3.7vw,54px);line-height:1.03;font-weight:500;letter-spacing:-.02em}
-.reach-live span{font-size:17px;line-height:1.4;color:#3d3d3d;max-width:40ch}
-@media (max-width:900px){.reach{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
+/* Reach box beside the title */
+.cs-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,360px);column-gap:clamp(32px,5vw,80px);row-gap:40px;align-items:start}
+.cs-top h1{font-size:clamp(44px,6vw,100px)}
+.cs-intro{display:flex;flex-direction:column;gap:28px}
+.reach-box{padding:clamp(22px,2.4vw,32px);border-radius:20px;background:var(--brand);display:flex;flex-direction:column;gap:20px}
+.reach-box h2{font-size:15px;line-height:1.2;font-weight:600}
+.reach-box dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+.reach-box dl div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px}
+.reach-box dl div:last-child:nth-child(odd){grid-column:1 / -1}
+.reach-box dd{margin:0;white-space:nowrap;font-size:clamp(32px,3vw,46px);line-height:1;font-weight:500;letter-spacing:-.03em}
+.reach-box dt{font-size:15px;line-height:1.35}
+.reach-live{display:flex;flex-direction:column;gap:8px}
+.reach-live b{font-size:clamp(26px,2.4vw,34px);line-height:1.05;font-weight:500;letter-spacing:-.02em}
+.reach-live span,.reach-note{font-size:15px;line-height:1.4}
+.reach-note b{font-weight:600}
+.press{display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid rgba(0,0,0,.2)}
+.press h3{margin:0;font-size:15px;font-weight:600}
+.press ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;font-size:14px;line-height:1.5}
+.press li:not(:last-child)::after{content:"·";margin-inline:.4em;opacity:.5}
+@media (max-width:1100px){.cs-top{grid-template-columns:1fr}}
 @media (max-width:900px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cs-head .num,.cs-head h2,.cs-head p{grid-column:1 / -1}
@@ -143,9 +152,17 @@ footer{background:#000;color:#bdbdbd;padding-block:40px calc(40px + env(safe-are
 
 <main class="cs">
   <section class="wrap cs-hero">
-    <p class="uni">Consorcio de universidades</p>
-    <h1>PBiS</h1>
-    <p class="lead">Un proyecto de transferencia de conocimiento para mejorar el clima de convivencia en los centros educativos y detectar el acoso a tiempo.</p>
+    <div class="cs-top">
+      <div class="cs-intro">
+        <p class="uni">Consorcio de universidades</p>
+        <h1>PBiS</h1>
+        <p class="lead">Un proyecto de transferencia de conocimiento para mejorar el clima de convivencia en los centros educativos y detectar el acoso a tiempo.</p>
+      </div>
+      <aside class="reach-box" aria-labelledby="reach">
+        <h2 id="reach">Alcance</h2>
+        <p class="reach-live"><b>Proyecto en marcha</b><span>Publicaremos las cifras de alcance cuando el proyecto tenga datos relevantes.</span></p>
+      </aside>
+    </div>
     <dl class="facts">
       <div><dt>Cliente</dt><dd>Universidad Loyola, Universidad Carlos III de Madrid, Universidad Politécnica de Madrid, Universidad Complutense de Madrid, Universidad del País Vasco y Universidad de Granada</dd></div>
       <div><dt>Año</dt><dd>2026</dd></div>
@@ -180,15 +197,6 @@ footer{background:#000;color:#bdbdbd;padding-block:40px calc(40px + env(safe-are
     <div class="stack">
       <figure class="media light"><video src="img/website-mockup.mp4" poster="img/website-mockup.webp" width="1440" height="932" autoplay muted loop playsinline preload="metadata" aria-label="La web pbis.es en un portátil, desde la portada hasta los ejemplos interactivos de redes de aula"></video></figure>
     </div>
-  </section>
-
-  <section class="wrap cs-sec" aria-labelledby="reach">
-    <div class="cs-head">
-      <span class="num">03</span>
-      <h2 id="reach">Alcance</h2>
-      <p>A cuántas personas llegó el proyecto.</p>
-    </div>
-    <p class="reach-live"><b>Proyecto en marcha</b><span>Publicaremos las cifras de alcance cuando el proyecto tenga datos relevantes.</span></p>
   </section>
 
   <div class="wrap">
